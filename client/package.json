@@ -5,6 +5,7 @@
     "start": "snowpack dev",
     "build": "snowpack build"
   },
+  "proxy": "http://node-server:8081",
   "devDependencies": {
     "@snowpack/plugin-build-script": "^2.1.0",
     "@snowpack/plugin-dotenv": "^2.1.0",

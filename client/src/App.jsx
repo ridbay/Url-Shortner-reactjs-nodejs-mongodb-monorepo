@@ -37,9 +37,12 @@ function App() {
   const getShortLink = async () => {
     try {
       const formatStr = input.toString().toLowerCase().trim();
-      const shortenedLink = await axios.post(`/api/short`, {
-        origUrl: formatStr,
-      });
+      const shortenedLink = await axios.post(
+        `http://node-server:8081/api/short`,
+        {
+          origUrl: formatStr,
+        }
+      );
 
       setLoading(false);
       setLink(shortenedLink.data.shortUrl);
