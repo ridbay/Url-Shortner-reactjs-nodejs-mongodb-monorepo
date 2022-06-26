@@ -1,0 +1,68 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn install
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands
+
+Yarn version: 
+  1.22.11
+
+Node version: 
+  14.17.6
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/ridbay/Pastel Test/client/package.json: Unexpected token / in JSON at position 100
+      at JSON.parse (<anonymous>)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "client",
+    "scripts": {
+      "start": "snowpack dev",
+      "build": "snowpack build"
+      // "prepare": "husky install",
+      // "prettier": "prettier '**/*.{js,jsx,ts,tsx}' --write",
+      // "lint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
+      // "pre-commit": "lint-staged"
+    },
+    // "husky": {
+    //   "hooks": {
+    //     "pre-commit": "lint-staged"
+    //   }
+    // },
+    // "lint-staged": {
+    //   "*.js": [
+    //     "git add"
+    //   ]
+    // },
+    "devDependencies": {
+      "@snowpack/plugin-build-script": "^2.1.0",
+      "@snowpack/plugin-dotenv": "^2.1.0",
+      "@snowpack/plugin-postcss": "^1.4.3",
+      "@snowpack/plugin-react-refresh": "^2.5.0",
+      // "husky": "^6.0.0",
+      // "lint-staged": "^11.0.0",
+      "postcss": "^8.3.5",
+      "postcss-cli": "^8.3.1",
+      "snowpack": "^3.3.7",
+      "tailwindcss": "^2.2.4"
+    },
+    "dependencies": {
+      "axios": "^0.21.1",
+      "react": "^17.0.2",
+      "react-dom": "^17.0.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
