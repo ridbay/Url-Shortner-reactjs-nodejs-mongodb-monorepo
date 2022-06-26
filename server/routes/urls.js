@@ -3,8 +3,9 @@ const router = express.Router();
 const shortid = require("shortid");
 const Url = require("../models/Url");
 const utils = require("../utils/utils");
-require("dotenv").config({ path: "../config/.env" });
 
+// const os = require("os");
+// const hostname = os.hostname();
 // Short URL Generator
 router.post("/short", async (req, res) => {
   const { origUrl } = req.body;
