@@ -1,0 +1,21 @@
+version: "3"
+services:
+  nodejs-server:
+    build:
+      context: ./server
+    ports:
+      - "8081:8081"
+    container_name: node-server
+    volumes:
+      - ./server:/usr/src/app/server
+      - /usr/src/app/server/node_modules
+  react-ui:
+    build:
+      context: ./client
+    ports:
+      - "8080:8080"
+    container_name: react-ui
+    stdin_open: true
+    volumes:
+      - ./client:/usr/src/app/client
+      - /usr/src/app/client/node_modules
