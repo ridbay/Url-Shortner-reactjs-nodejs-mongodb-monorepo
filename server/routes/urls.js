@@ -8,12 +8,8 @@ require("dotenv").config({ path: "../config/.env" });
 // Short URL Generator
 router.post("/short", async (req, res) => {
   const { origUrl } = req.body;
-  const hostname = process.env.HOSTNAME;
 
-  const production = `https://${hostname}`;
-  const development = "http://localhost:8081";
-
-  const base = process.env.NODE_ENV ? production : development;
+  const base = `http://node-server:8081`;
 
   const urlId = shortid.generate();
   if (utils.validateUrl(origUrl)) {
